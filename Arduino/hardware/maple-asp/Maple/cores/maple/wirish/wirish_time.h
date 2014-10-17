@@ -58,6 +58,8 @@ static inline uint32 micros(void) {
     do {
         ms = millis();
         cycle_cnt = systick_get_count();
+        asm volatile("nop"); //allow interrupt to fire
+        asm volatile("nop");
     } while (ms != millis());
 
 #define US_PER_MS               1000
