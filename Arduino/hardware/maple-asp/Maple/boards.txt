@@ -1,14 +1,12 @@
 # Maple boards
 
 ##############################################################
-
 maple.name=LeafLabs Maple Rev 3+ to Flash
 
 maple.upload.tool=maple_upload
 maple.upload.protocol=maple_dfu
 maple.upload.maximum_size=108000
 maple.upload.use_1200bps_touch=false
-
 maple.upload.file_type=bin
 maple.upload.ram.maximum_size=17000
 maple.upload.flash.maximum_size=108000
@@ -16,7 +14,6 @@ maple.upload.usbID=1EAF:0003
 maple.upload.altID=1
 maple.upload.auto_reset=true
 
-#maple.build.mcu=STM32F103RB
 maple.build.mcu=cortex-m3
 maple.build.f_cpu=72000000L
 maple.build.core=maple
@@ -24,10 +21,8 @@ maple.build.extra_flags=-DMCU_STM32F103RB -mthumb -DSTM32_MEDIUM_DENSITY -DBOOTL
 maple.build.ldscript=ld/flash.ld
 maple.build.variant=maple
 maple.build.variant_system_lib=libmaple.a
-
 maple.build.vect=VECT_TAB_FLASH
 maple.build.density=STM32_MEDIUM_DENSITY
-
 maple.build.error_led_port=GPIOA
 maple.build.error_led_pin=5
 
@@ -38,7 +33,6 @@ mapleRAM.upload.tool=maple_upload
 mapleRAM.upload.protocol=maple_dfu
 mapleRAM.upload.maximum_size=17000
 mapleRAM.upload.use_1200bps_touch=false
-
 mapleRAM.upload.file_type=bin
 mapleRAM.upload.ram.maximum_size=17000
 mapleRAM.upload.flash.maximum_size=108000
@@ -46,7 +40,6 @@ mapleRAM.upload.usbID=1EAF:0003
 mapleRAM.upload.altID=0
 mapleRAM.upload.auto_reset=true
 
-#mapleRAM.build.mcu=STM32F103RB
 mapleRAM.build.mcu=cortex-m3
 mapleRAM.build.f_cpu=72000000L
 mapleRAM.build.core=maple
@@ -54,10 +47,8 @@ mapleRAM.build.extra_flags=-DMCU_STM32F103RB -mthumb -MD -DSTM32_MEDIUM_DENSITY 
 mapleRAM.build.ldscript=ld/ram.ld
 mapleRAM.build.variant=maple
 mapleRAM.build.variant_system_lib=libmaple.a
-
 mapleRAM.build.vect=VECT_TAB_RAM
 mapleRAM.build.density=STM32_MEDIUM_DENSITY
-
 mapleRAM.build.error_led_port=GPIOA
 mapleRAM.build.error_led_pin=5
 
@@ -68,7 +59,6 @@ maple_mini.upload.tool=maple_upload
 maple_mini.upload.protocol=maple_dfu
 maple_mini.upload.maximum_size=108000
 maple_mini.upload.use_1200bps_touch=false
-
 maple_mini.upload.file_type=bin
 maple_mini.upload.ram.maximum_size=17000
 maple_mini.upload.flash.maximum_size=108000
@@ -77,7 +67,6 @@ maple_mini.upload.usbID=1EAF:0003
 maple_mini.upload.altID=1
 maple_mini.upload.auto_reset=true
 
-#maple_mini.build.mcu=STM32F103CB
 maple_mini.build.mcu=cortex-m3
 maple_mini.build.f_cpu=72000000L
 maple_mini.build.core=maple
@@ -85,37 +74,35 @@ maple_mini.build.extra_flags=-DMCU_STM32F103CB -mthumb -MD -DSTM32_MEDIUM_DENSIT
 maple_mini.build.ldscript=ld/flash.ld
 maple_mini.build.variant=maple_mini
 maple_mini.build.variant_system_lib=libmaple.a
-
 maple_mini.build.vect=VECT_TAB_FLASH
 maple_mini.build.density=STM32_MEDIUM_DENSITY
-
 maple_mini.build.error_led_port=GPIOB
 maple_mini.build.error_led_pin=1
-
 
 ##############################################################
 maple_miniRAM.name=LeafLabs Maple Mini Rev 2 to RAM
 
-maple_miniRAM.upload.file_type=bin
-maple_miniRAM.upload.maximum_size=17000
-maple_miniRAM.upload.ram.maximum_size=17000
-maple_miniRAM.upload.flash.maximum_size=108000
-maple_miniRAM.upload.usbID=1EAF:0003
-maple_miniRAM.upload.altID=0
-maple_miniRAM.upload.uploader=dfu-util
-maple_miniRAM.upload.auto_reset=true
+mapleRAM.upload.tool=maple_upload
+mapleRAM.upload.protocol=maple_dfu
+mapleRAM.upload.maximum_size=17000
+mapleRAM.upload.use_1200bps_touch=false
+mapleRAM.upload.file_type=bin
+mapleRAM.upload.ram.maximum_size=17000
+mapleRAM.upload.flash.maximum_size=108000
+mapleRAM.upload.usbID=1EAF:0003
+mapleRAM.upload.altID=0
+mapleRAM.upload.auto_reset=true
 
-maple_miniRAM.build.board=maple_mini
-maple_miniRAM.build.mcu=STM32F103CB
-maple_miniRAM.build.family=cortex-m3
+maple_miniRAM.build.mcu=cortex-m3
 maple_miniRAM.build.f_cpu=72000000L
 maple_miniRAM.build.core=maple
-maple_miniRAM.build.submdl=stm32f103
-maple_miniRAM.build.vect=VECT_TAB_RAM
-maple_miniRAM.build.linker=maple_mini/ram.ld
-maple_miniRAM.build.using=armcompiler
-maple_miniRAM.build.density=STM32_MEDIUM_DENSITY
-maple_miniRAM.build.error_led_port=GPIOB
-maple_miniRAM.build.error_led_pin=1
+mapleRAM.build.extra_flags=-DMCU_STM32F103CB -mthumb -MD -DSTM32_MEDIUM_DENSITY -DBOOTLOADER_maple
+mapleRAM.build.ldscript=ld/ram.ld
+mapleRAM.build.variant=maple_mini
+mapleRAM.build.variant_system_lib=libmaple.a
+mapleRAM.build.vect=VECT_TAB_RAM
+mapleRAM.build.density=STM32_MEDIUM_DENSITY
+mapleRAM.build.error_led_port=GPIOB
+mapleRAM.build.error_led_pin=1
 
 ##############################################################
